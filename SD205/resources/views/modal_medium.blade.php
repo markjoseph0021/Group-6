@@ -45,7 +45,8 @@
             <div class="side" id="right_side">
                 <div class="section1">
                     <div class="select_size">
-                        <div  href= "" class="save_pin">Save</div>
+                        <div  href= "" 
+                        class="save_pin">Save</div>
                     </div>
                 </div>
 

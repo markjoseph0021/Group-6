@@ -55,6 +55,7 @@
   position: relative;
   border-radius: var(--card_border_radius);
   overflow: hidden;
+  border: solid 1px black;
 }
 
 .card_small {
