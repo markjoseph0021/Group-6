@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/pin_styles.css">
+    <link rel="stylesheet" href="{{asset ('./styles/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset ('./styles/pin_styles.css')}}">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
 
     </div>
 
-    <script src="./scripts/pin_script.js"></script>
+    <script src="{{ asset ('./scripts/pin_script.js') }}"></script>
 </body>
 
 </html>

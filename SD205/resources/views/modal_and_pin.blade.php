@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/pin_styles.css">
-    <link rel="stylesheet" href="./styles/modal_styles.css">
-    <link rel="stylesheet" href="./styles/modal_and_pin_styles.css">
+    <link rel="stylesheet" href="{{asset ('./styles/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset ('./styles/pin_styles.css')}}">
+    <link rel="stylesheet" href="{{asset ('./styles/modal_styles.css')}}">
+    <link rel="stylesheet" href="{{asset ('./styles/modal_and_pin_styles.css')}}">
 </head>
 
 <body>
@@ -109,7 +109,7 @@
         </div>
     </div>
 
-    <script src="./scripts/modal_and_pin.js"></script>
+    <script src="{{ asset ('./scripts/modal_and_pin.js') }}"></script>
 </body>
 
 </html>

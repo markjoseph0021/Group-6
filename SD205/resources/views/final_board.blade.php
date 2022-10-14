@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/pin_styles.css">
-    <link rel="stylesheet" href="./styles/modal_styles.css">
-    <link rel="stylesheet" href="./styles/final_board.css">
+    <link rel="stylesheet" href="{{asset ('./styles/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset ('./styles/pin_styles.css')}}">
+    <link rel="stylesheet" href="{{asset ('./styles/modal_styles.css')}}">
+    <link rel="stylesheet" href="{{asset ('./styles/final_board.css')}}">
+    
 </head>
 
 <body>
@@ -77,7 +78,7 @@
         </div>
     </div>
 
-    <script src="./scripts/final_board.js"></script>
+    <script src="{{ asset ('./scripts/final_board.js') }}"></script>
 </body>
 
 </html>
