@@ -13,27 +13,18 @@
 
     
     <div class="container">
-        <h2 class="he"><u>Registration Form</u></h2>
+        <h2 class="he"><u>Login Form</u></h2>
         <br><br>
-        <form action="{{ route('post.register') }}", method="POST">
+        <form action="{{ route('post.login') }}", method="POST">
             @csrf
-            <div class="form-group">
-             <b>First Name</b>   <input type="text" name="firstname" id="fname" required placeholder="Enter first name" pattern=".{2,25}"  oninvalid="this.setCustomValidity('Length of first name must be at least 2 characters and not exceed 25 characters')" onchange="try{setCustomValidity('')}catch(e){}"></input>
-             </div>
-            <div class="form-group">
-             <b>Last Name</b>   <input type="text" name="lastname" id="lname"  required placeholder="Enter last name" pattern=".{2,25}"  oninvalid="this.setCustomValidity('Length of last name must be at least 2 characters and not exceed 25 characters.')" onchange="try{setCustomValidity('')}catch(e){}"></input>
-           </div>
             <div class="form-group">
               <b>Email Address</b>  <input type="email" name="email" id="email" placeholder="Enter email address"  required oninvalid="this.setCustomValidity('Please give valid format, like @yahoo.com or @gmail.com, etc,.')" onchange="try{setCustomValidity('')}catch(e){}"></input>
            </div>
             <div class="form-group">
               <b>Password</b>  <input type="password" name="password" id="pwd" placeholder="Enter new password"title="Password should be of 6-10 length and should contain atleast one character and one number"></input>
               </div>
-             <div class="form-group">
-               <b>Confirm Password</b> <input type="password" name="password-confirmation" id="psw-repeat" placeholder="Repeat your password" required>
-            </div>
             <div class="form-group1">
-                <button type="submit">Submit</button>
+                <button type="submit">Login</button>
             </div>
         </form>
           </div>

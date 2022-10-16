@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('registration_form');
-});
+    return view('modal_small');
+})->name('home');
+
+// login
+Route::get('/login', [LoginController::class, 'loginForm'])->name('get.login');
+Route::post('/login', [LoginController::class, 'login'])->name('post.login');
+
+Route::get('/register', [AccountController::class, 'create'])->name('get.register');
+Route::post('/register', [AccountController::class, 'store'])->name('post.register'); // save
