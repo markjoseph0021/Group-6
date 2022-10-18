@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,7 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
-    return view('modal_small');
+    return view('final_board');
 })->name('home');
 
 // login
@@ -25,3 +25,6 @@ Route::post('/login', [LoginController::class, 'login'])->name('post.login');
 
 Route::get('/register', [AccountController::class, 'create'])->name('get.register');
 Route::post('/register', [AccountController::class, 'store'])->name('post.register'); // save
+
+Route::get('/content', [PostController::class,'create'])->name('get.post');
+Route::post('/content', [PostController::class,'store'])->name('post.post');
