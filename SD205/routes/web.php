@@ -15,15 +15,19 @@ use App\Http\Controllers\PostController;
 |
 */
 
+/* -> changes the variable into another variable like for example a = b therefore b is equal to a now.*/
+/* post is to store or save in the database and get is to retrieve the data. */
+
 Route::get('/', function () {
     return view('final_board');
 })->name('home');
 
 // login
-Route::get('/login', [LoginController::class, 'loginForm'])->name('get.login');
+Route::get('/login'/* function name */, [LoginController::class, 'loginForm'/*Login Blade*/])->name('get.login');
 Route::post('/login', [LoginController::class, 'login'])->name('post.login');
 
-Route::get('/register', [AccountController::class, 'create'])->name('get.register');
+//register
+Route::get('/register', [AccountController::class, 'create'/* function name */])->name('get.register');
 Route::post('/register', [AccountController::class, 'store'])->name('post.register'); // save
 
 Route::get('/content', [PostController::class,'create'])->name('get.post');

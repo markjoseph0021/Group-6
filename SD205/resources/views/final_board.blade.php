@@ -477,9 +477,9 @@
                 </div>
 
                 <div class="section2">
-                    <input placeholder="Add your title" type="text" class="new_pin_input" id="pin_title" name ="pin_title">
-                    <input placeholder="Tell everyone what your Pin is about" type="text" class="new_pin_input" id="pin_description">
-                    <input placeholder="Add a destination link" type="text" class="new_pin_input" id="pin_destination">
+                    <input placeholder="Add your title" type="text" class="new_pin_input" id="pin_title" name ="pintitle">
+                    <input placeholder="Tell everyone what your Pin is about" type="text" class="new_pin_input" id="pin_description" name="description">
+                    <input placeholder="Add a destination link" type="text" class="new_pin_input" id="pin_destination" name="link">
                 </div>
             </div>
         </div>
