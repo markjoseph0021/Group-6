@@ -36,7 +36,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         Post::create($request->all());
-        return redirect()->route('post');
+        return redirect()->route('home');
     }
 
     /**

@@ -19,7 +19,7 @@ use App\Http\Controllers\PostController;
 /* post is to store or save in the database and get is to retrieve the data. */
 
 Route::get('/', function () {
-    return view('final_board');
+    return view('modal_large');
 })->name('home');
 
 // login
