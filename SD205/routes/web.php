@@ -17,10 +17,36 @@ use App\Http\Controllers\PostController;
 
 /* -> changes the variable into another variable like for example a = b therefore b is equal to a now.*/
 /* post is to store or save in the database and get is to retrieve the data. */
+ 
 
-Route::get('/', function () {
-    return view('modal_large');
-})->name('home');
+Route::get('/', [PostController::class, 'index'])->name('final_board');
+// Route::get('/', function () {
+//     return view('final_board');
+// });
+
+Route::get('/sign', function () {
+    return view('registration_form');
+});
+
+Route::get('/login', function () {
+    return view('login_form');
+});
+
+Route::get('/about', function () {
+    return view('login_form');
+});
+
+Route::get('/about', function () {
+    return view('login_form');
+});
+
+Route::get('/content', function () {
+    return view('final_board');
+});
+
+Route::get('/medium_modal', function () {
+    return view('modal_medium');
+});
 
 // login
 Route::get('/login'/* function name */, [LoginController::class, 'loginForm'/*Login Blade*/])->name('get.login');

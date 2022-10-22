@@ -50,7 +50,7 @@ document.querySelector('#upload_img').addEventListener('change', event => {
         }
     }
 
-    document.querySelector('#upload_img').value = '';
+    // document.querySelector('#upload_img').value = '';
 });
 
 document.querySelector('.save_pin').addEventListener('click', () => {

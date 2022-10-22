@@ -25,16 +25,16 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
               <li class="nav-item">
-                <a class="nav-link" href="#about">ABOUT</a>
+                <a class="nav-link" href="/about">ABOUT</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="#services">BlOG</a>
+                <a class="nav-link" href="/blog">BlOG</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="#portfolio">LOGIN</a>
+                <a class="nav-link" href="/login">LOGIN</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost/Registration-Form/form.php">SIGN UP</a>
+                <a class="nav-link" href="/sign">SIGN UP</a>
               </li>
                      
             </ul>

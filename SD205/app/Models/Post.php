@@ -13,6 +13,8 @@ class Post extends Eloquent
         'pin_title',
         'pin_description',
         'pin_destination',
+        'pin_image',
         'pin_link',
     ];
 }
+ 

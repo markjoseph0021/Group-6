@@ -14,7 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+        return view('final_board', compact('posts'));
     }
 
     /**
@@ -35,8 +36,16 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        Post::create($request->all());
-        return redirect()->route('home');
+        $imageName = time().'.'.$request->image->extension();
+
+        $request->image->move(public_path('images'), $imageName);
+
+        $data = $request->all();
+
+        $data['pin_image'] = $imageName;
+
+        Post::create($data);
+        return redirect()->route('final_board');
     }
 
     /**
@@ -47,7 +56,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        
     }
 
     /**

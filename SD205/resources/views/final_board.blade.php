@@ -5,41 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{asset ('./styles/normalize.css')}}">
-    <link rel="stylesheet" href="{{asset ('./styles/pin_styles.css')}}">
-    <link rel="stylesheet" href="{{asset ('./styles/modal_styles.css')}}">
-    <link rel="stylesheet" href="{{asset ('./styles/final_board.css')}}">
+    <link rel="stylesheet" href="{{asset ('/styles/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset ('/styles/pin_styles.css')}}">
+    <link rel="stylesheet" href="{{asset ('/styles/modal_styles.css')}}">
+    <link rel="stylesheet" href="{{asset ('/styles/final_board.css')}}">
     <link href="{{ asset('styles/landing_page_style.css')}}" rel="stylesheet" >
+    <link rel="stylesheet" href="{{asset ('/styles/nav_style.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
 </head>
 
 <body>
 
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="#"><span class="text-warning">Social</span>Hobbist</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-              <li class="nav-item">
-                <a class="nav-link" href="#about">ABOUT</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="#services">BlOG</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolio">LOGIN</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="http://localhost/Registration-Form/form.php">SIGN UP</a>
-              </li>
-                     
-            </ul>
-          </div>
-        </div>
-      </nav> -->
+    <div class="nav">
+        <li><img src="logo.png" alt="logo" width="30" height="30"></li>
+        <li>Create</li>
+        <li>Today</li>
+        <li class="search"><input type="text" placeholder="Search"></li>
+        <li class="notification"><i class="fas fa-bell"></i></li>
+        <li><i class="far fa-comment-dots"></i></li>
+        <li class="profile"><img src="/images/profile.png" alt="profile" width="30" height="30"></li>
+    </div>
 
     <div class="navigation_bar">
         <div class="pint_mock_icon_container add_pin">
@@ -47,6 +33,24 @@
         </div>
     </div>
 
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Link</th>
+            <th>Image</th>
+        </tr>
+
+        @foreach($posts as $post)
+        <tr class="">
+            <th>{{ $post->pin_title }}</th>
+            <th>{{ $post->pin_description }}</th>
+            <th>{{ $post->pin_link }}</th>
+            <th><img src="{{ url('/images/'.$post->pin_image) }}" alt=""></th>
+        </tr>
+        @endforeach
+    </table>
+<div>
     <div class="pin_container">
         <div class="card card_small">
             <div class="pin_modal">
@@ -59,7 +63,7 @@
                     <div class="pint_mock_icon_container">
                         <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
                     </div>
-                    <span>Eatery</span>
+                    <a href="/medium_modal"><span>Eatery</span></a>
                 </div>
 
                 <div class="pint_mock_icon_container">
@@ -426,7 +430,8 @@
             </div>
         </div></div>
     </div>
-    <form action="{{ route('post.post') }}", method="POST">
+</div>
+    <form action="{{ route('post.post') }}", method="POST" enctype="multipart/form-data">
      @csrf
     <div class="add_pin_modal">
         <div class="add_pin_container">
@@ -442,13 +447,13 @@
                         <div class="upload_img_container">
                             <div id="dotted_border">
                                 <div class="pint_mock_icon_container">
-                                    <img src="./images/up-arrow.png" alt="upload_img" class="pint_mock_icon">
+                                    <img src="./images/up-arrow.png" alt="upload_img"  class="pint_mock_icon">
                                 </div>
                                 <div>Click to upload</div>
                                 <div>Recommendation: Use high-quality .jpg files less than 20MB</div>
                             </div>
                         </div>
-                        <input type="file" name="upload_img" id="upload_img">
+                        <input type="file" name="image" id="upload_img">
                     </label>
 
                     <div class="modals_pin">

@@ -38,7 +38,7 @@ class AccountController extends Controller
         Account::create($request->all());
         /* Account::create is to create in the database and the ($request ->all()); is to store in all in the data by requesting it all in the Account.php which is the model and the model is connected to the view which they are connected by using their name ID given by the creator. */
 
-        return redirect()->route('home'); 
+        return view('final_board'); 
         /* From the word redirect, you'll be redirected to a variable page named home and home is connected to the web.php and you can see the connection there below the 
         
         Route::get('/', function (){

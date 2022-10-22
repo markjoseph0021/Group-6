@@ -14,7 +14,7 @@ class LoginController extends Controller
 
         if ($user) {
             if ($user->password == $request->password) {
-                return redirect()->route('home');
+                return view('final_board');
             }
             else {
                 return "Incorrect email or password!";
