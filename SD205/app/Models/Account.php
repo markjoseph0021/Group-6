@@ -16,5 +16,5 @@ class Account extends Eloquent
         'email',
         'password',
         'link-personal'
-    ];
+    ]; 
 }

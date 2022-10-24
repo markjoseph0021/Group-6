@@ -19,7 +19,7 @@
 
     <div class="nav">
         <li><img src="logo.png" alt="logo" width="30" height="30"></li>
-        <li>Create</li>
+        <li><a href="/home">Home</a></li>
         <li>Today</li>
         <li class="search"><input type="text" placeholder="Search"></li>
         <li class="notification"><i class="fas fa-bell"></i></li>
@@ -35,24 +35,40 @@
 
     <table>
         <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Link</th>
-            <th>Image</th>
+            <th class="pin_title">Title</th>
+            <th class="pin_title">Description</th>
+            <th class="pin_title">Link</th>
+            <th class="pin_title">Image</th>
+            <th class="pin_title">Size</th>
+
         </tr>
 
         @foreach($posts as $post)
-        <tr class="">
-            <th>{{ $post->pin_title }}</th>
-            <th>{{ $post->pin_description }}</th>
-            <th>{{ $post->pin_link }}</th>
-            <th><img src="{{ url('/images/'.$post->pin_image) }}" alt=""></th>
-        </tr>
+           
+            <tr>
+                <div class="pin_container">
+                    <div class="card">
+                        <div class="pin_modal">>
+                    <th class="pin_title" >{{ $post->pin_size }}</th>
+                    <th class="pint_title">{{ $post->pin_title }}</th>
+                    <th class="pint_title">{{ $post->pin_description }}</th>
+                    <th>{{ $post->pin_link }}</th>
+                    <th><img src="{{ url('/images/'.$post->pin_image) }}" alt=""></th>
+                    </div>
+                    </div>
+                </div>
+                
+            </tr>
         @endforeach
     </table>
-<div>
+</div>
+</div>
+</div>
+
+
     <div class="pin_container">
         <div class="card card_small">
+            <img src="/images/1666506459.gif" alt="">
             <div class="pin_modal">
             <div class="modal_head">
                 <div class="save_card">Save</div>
@@ -74,8 +90,10 @@
                     <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
                 </div>
             </div>
-        </div></div>
+        </div>
+    </div>
         <div class="card card_medium">
+        <img src="/images/1666506858.jpg" alt="">
             <div class="pin_modal">
             <div class="modal_head">
                 <div class="save_card">Save</div>
@@ -99,338 +117,8 @@
             </div>
         </div>
     </div>
+    
 
-        <div class="card card_large"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div class="card card_medium"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div class="card card_small"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div class="card card_large"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div class="card card_medium"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div class="card card_small"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div class="card card_medium"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-        <div class="card card_small"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div class="card card_medium"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <div class="card card_large"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div></div>
-
-        <div class="card card_medium"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div></div>
-
-        <div class="card card_small"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div></div>
-
-        <div class="card card_medium"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div></div>
-
-        <div class="card card_large"><div class="pin_modal">
-            <div class="modal_head">
-                <div class="save_card">Save</div>
-            </div>
-
-            <div class="modal_foot">
-                <div class="destination">
-                    <div class="pint_mock_icon_container">
-                        <img src="./images/upper-right-arrow.png" alt="destination" class="pint_mock_icon">
-                    </div>
-                    <span>Eatery</span>
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/send.png" alt="send" class="pint_mock_icon">
-                </div>
-
-                <div class="pint_mock_icon_container">
-                    <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
-                </div>
-            </div>
-        </div></div>
-    </div>
-</div>
     <form action="{{ route('post.post') }}", method="POST" enctype="multipart/form-data">
      @csrf
     <div class="add_pin_modal">

@@ -24,7 +24,7 @@
               <b>Password</b>  <input type="password" name="password" id="pwd" placeholder="Enter new password"title="Password should be of 6-10 length and should contain atleast one character and one number"></input>
               </div>
             <div class="form-group1">
-                <button type="submit">Login</button>
+                <button type="submit" href="/final_board">Login</button>
             </div>
         </form>
           </div>

@@ -1,16 +1,31 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Post;
+
 use Illuminate\Http\Request;
 
+use App\Models\Account;
 
-class ShowController extends Controller
+class ShowContoller extends Controller
 {
-    public function show_post(Request $request)
+    public function show(Request $request)
     {
-        $details = Post::where('_id',   $request->id)->get();
-        echo "The following details" .$details.
+        $show = Account::where('email', $request->email)->first();
 
+        if ($show) {
+            if ($show->password == $request->password) {
+                return redirect('final_board');
+            }
+            else {
+                return "Incorrect email or password!";
+            }
+        } else {
+            return "Incorrect email or password!";
+        }
+    }
+
+    public function loginForm()
+    {
+        return view('login_form');
     }
 }

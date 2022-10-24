@@ -33,7 +33,7 @@
                <b>Confirm Password</b> <input type="password" name="password-confirmation" id="psw-repeat" placeholder="Repeat your password" required>
             </div>
             <div class="form-group1">
-                <button type="submit">Submit</button>
+                <button type="submit" href="/final_board">Submit</button>
             </div>
         </form>
           </div>
